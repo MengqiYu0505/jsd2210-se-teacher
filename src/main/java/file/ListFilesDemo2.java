@@ -25,7 +25,8 @@ public class ListFilesDemo2 {
                     return name.endsWith(".txt");//判断名字是否以".txt"结尾
                 }
             };
-            File[] subs = dir.listFiles(filter);
+            //返回目录中所有满足过滤器要求的子项
+            File[] subs = dir.listFiles(filter);//listFiles方法内部会利用过滤器的accept方法将目录每个子项都经过一次过滤器
 
             for(File sub : subs){
                 System.out.println(sub.getName());
