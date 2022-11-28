@@ -10,12 +10,18 @@ public class Test2 {
     public static void main(String[] args) {
         File dir = new File(".");
         if(dir.isDirectory()){
-            FileFilter filter = new FileFilter() {
+//            FileFilter filter = new FileFilter() {
+//                public boolean accept(File file) {
+//                    return file.getName().startsWith("test");
+//                }
+//            };
+//            File[] subs = dir.listFiles(filter);
+
+            File[] subs = dir.listFiles(new FileFilter() {
                 public boolean accept(File file) {
                     return file.getName().startsWith("test");
                 }
-            };
-            File[] subs = dir.listFiles(filter);
+            });
             for(File sub : subs){
                 System.out.println(sub.getName());
             }
