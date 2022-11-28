@@ -1,4 +1,4 @@
-package day01;
+package homework.day01;
 
 /**
  * 列出当前目录中所有名字包含s的子项。
